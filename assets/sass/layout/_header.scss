@@ -1,0 +1,30 @@
+header{
+    width: 100%;
+    height: 20vh;
+    overflow: hidden;
+    background-image: url(../images/imagen1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    
+    
+    @include point_df-break($break_tablet){
+        height: 38vh;
+        background-position:center;
+
+     
+    }
+
+    @include point_df-break($break_desktop){
+        grid-area: area-1;
+        height: auto;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position:center;
+    }
+
+}
+
+.size_imagen{
+    width: 5.94rem;
+}

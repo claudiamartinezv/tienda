@@ -1,0 +1,19 @@
+@mixin toRem($property, $value) {
+    #{$property}: ($value / 16) + rem;
+}
+  
+  
+// point break screen from movil to large de small a large
+@mixin point_df-break($size){
+    @media screen and (min-width: $size) {
+      @content;
+    }
+}
+  
+// point break screen from movil to large de large a small
+@mixin point_mf-break($size){
+    @media screen and (max-width: $size) {
+      @content;
+    }
+}
+    

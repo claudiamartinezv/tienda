@@ -1,0 +1,28 @@
+.btn {
+ 
+    &__primary{
+        border: 2px solid $smoky-black;
+        background-color: $white;
+        padding: 0.63rem 0.94rem;
+        font-weight: $font-bold;
+        color: $smoky-black;
+        &:hover{}
+        &:focus{}
+    }
+    &--normal{
+        padding: 1rem 2rem;
+        font-size: $font-small;
+    }
+    &--smal{
+        padding: .5rem 1rem;
+        font-size: $font-x-small;
+    }
+
+    &:hover{
+        border: 1px solid $granite-gray;
+    }
+    &:focus{
+        border: 1px solid $quick-silver;
+    }
+}
+

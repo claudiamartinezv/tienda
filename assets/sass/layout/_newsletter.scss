@@ -1,0 +1,28 @@
+.newletter{
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    &__form{
+        grid-column: 1 / span 7; 
+        background-color: $smoky-black;
+        padding: 1rem 1rem 2rem 2rem;
+
+        @include point_df-break($break_tablet){
+            padding: 3rem;
+        }
+    }
+
+    &__vertical{
+        grid-column: 8;
+        padding-left: 1rem;
+        writing-mode: vertical-lr;
+        transform: rotate(360Deg);
+        font-family: $font-relawey;
+        font-weight: $font-bold;
+        font-size:$font-small;
+        color: $smoky-black;
+        width: 100%;
+        align-self: center;
+        height: auto;
+      
+    }
+}

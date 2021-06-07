@@ -1,0 +1,86 @@
+.navigation{
+    position: relative;
+    display: inline-flex;
+    width: 100%;
+}
+.navigation__logo{
+    position: relative;
+    font-family: $font-oldstand;
+    background-color: $smoky-black;
+    color:$white;
+    font-size: $font-large;
+    font-weight: $font-bold;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-right: 1rem;
+    height: auto;
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
+}
+
+.collapsible{
+    text-align: right;
+    margin-left: auto;
+    label{
+        display: block;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        padding-right: 1.5em;
+        font-size: 1.8rem;
+        @include point_df-break($break_tablet){
+            display: none;
+        }
+    }
+}
+
+#menu {
+    display: none;
+}
+
+input:checked ~ .navigation__container { 
+    max-height: 100%;
+}
+
+.navigation__container{
+    max-height: 0;
+    padding: 0;
+    overflow: hidden;
+    @include point_df-break($break_tablet){
+        max-height: 100%;
+        padding: 0.5em 1.5em 0.5em 0;
+        overflow: visible;
+    }
+}
+
+.navigation__item{
+    list-style: none;
+    a {
+        display: block;
+        text-align: left;
+        padding: 0.5em;
+        font-family: $font-relawey;
+        font-size: $font-medium;
+        font-weight: $font-bold;
+        color: $smoky-black;
+        text-decoration: none;
+        @include point_df-break($break_tablet){
+            padding: 0.5em 1em;
+        }
+
+        &:hover{
+            color: $quick-silver;
+        }
+    }
+
+}
+
+@include point_df-break($break_tablet){
+    .navigation__list{
+        display: flex;
+        justify-content: flex-end;
+        margin: inherit;
+        padding: inherit;
+    }   
+}
+

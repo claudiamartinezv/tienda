@@ -1,0 +1,16 @@
+.container-grid{
+
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    grid-gap: 20px 0; 
+    width: 100%;
+
+    @include point_df-break($break_desktop){
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: "area-2 area-1"
+                             "area-3 area-1";
+    }
+
+}

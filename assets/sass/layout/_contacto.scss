@@ -1,0 +1,32 @@
+.contacto{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 100%;    
+    height: auto;
+    color: $white;
+    justify-content: center;
+
+   
+    &__vertical{
+        padding-left: 3rem;
+        grid-column: 5 ;
+        writing-mode: vertical-lr;
+        transform: rotate(360Deg);
+        font-family: $font-relawey;
+        font-weight: $font-bold;
+        font-size:$font-small;
+        color: $smoky-black;
+        width: 100%;
+        align-self: center;
+        height: auto;
+  
+    }
+
+    @include point_df-break($break_desktop){
+        grid-area: div3;
+    }
+
+
+}
+
+
